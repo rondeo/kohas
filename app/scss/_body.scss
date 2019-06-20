@@ -1,0 +1,115 @@
+/*!
+ * Body content
+ */
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-variant: small-caps;
+}
+
+/* error if tags without attr */
+img:not([alt]),
+label:not([for]),
+input[type=submit]:not([value]) {
+  outline: 1px dotted red;
+}
+
+/* error if first child not used  */
+ul > *:not(li),
+ol > *:not(li),
+dl > *:not(dt):not(dd) {
+  outline: 1px dotted red;
+}
+
+input:focus, textarea, a, button {
+  outline: none !important;
+  //-webkit-appearance: none !important; //trouble with radiobutton
+}
+
+a, a:hover {
+  color: $brown;
+  transition: .3s;
+}
+
+.clearfix {
+
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#back-to-top {
+  color: $white;
+  width: 50px;
+  height: 50px;
+  background: $brown;
+  text-transform: uppercase;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  line-height: 50px;
+  font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+
+  &:hover {
+    background: $brown;
+    text-decoration: none;
+  }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ddd;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #ddd;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #ddd;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #ddd;
+}
+
+.scale {
+
+  &:hover {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+.animate {
+  transition: .3s;
+
+  &:hover {
+    transition: .3s;
+  }
+}
+
+.title {
+  font-size: 28px;
+}
+

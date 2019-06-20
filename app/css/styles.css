@@ -1,0 +1,174 @@
+/*!
+ * All styles for site
+ */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@font-face {
+  font-family: "Glyphicons Halflings";
+  font-style: "normal";
+  font-weight: "300";
+  src: url("../fonts/glyphicons-halflings-regular.eot");
+  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#Glyphicons Halflings") format("svg");
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+@font-face {
+  font-family: "Font Awesome";
+  font-style: "normal";
+  font-weight: "300";
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#Font Awesome") format("svg");
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/*!
+ * Body content
+ */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-variant: small-caps; }
+
+/* error if tags without attr */
+img:not([alt]),
+label:not([for]),
+input[type=submit]:not([value]) {
+  outline: 1px dotted red; }
+
+/* error if first child not used  */
+ul > *:not(li),
+ol > *:not(li),
+dl > *:not(dt):not(dd) {
+  outline: 1px dotted red; }
+
+input:focus, textarea, a, button {
+  outline: none !important; }
+
+a, a:hover {
+  color: #b39e82;
+  transition: .3s; }
+
+.clearfix:after, .clearfix:before {
+  content: "";
+  display: table;
+  height: 0; }
+
+.clearfix:after {
+  clear: both; }
+
+.wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+#back-to-top {
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  background: #b39e82;
+  text-transform: uppercase;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  line-height: 50px;
+  font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  z-index: 999; }
+  #back-to-top:hover {
+    background: #b39e82;
+    text-decoration: none; }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #ddd; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ddd; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #ddd; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ddd; }
+
+.scale:hover {
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05); }
+
+.animate {
+  transition: .3s; }
+  .animate:hover {
+    transition: .3s; }
+
+.title {
+  font-size: 28px; }
+
+/*!
+ * Header content
+ */
+/*!
+ * Main content
+ */
+.main {
+  padding-top: 70px; }
+
+/*!
+ * Footer content
+ */
+.footer-info {
+  border-top: 2px solid #b39e82;
+  padding-top: 25px;
+  margin-top: 10px; }
+
+.footer .subscribe {
+  background: #b39e82; }
+
+.footer .copyright {
+  background: #151619; }
+  .footer .copyright a {
+    color: #ffffff; }
+    .footer .copyright a:hover {
+      color: #b39e82;
+      text-decoration: none; }
+    .footer .copyright a.social {
+      display: inline-block;
+      width: 39px;
+      height: 39px;
+      border-radius: 50%;
+      background: #d4b152;
+      background: radial-gradient(ellipse at center, #d4b152 0%, #975a07 100%);
+      line-height: 39px;
+      font-size: 24px;
+      text-shadow: 1px 2px 3px #151619;
+      position: relative;
+      overflow: hidden; }
+      .footer .copyright a.social:after {
+        position: absolute;
+        left: -10px;
+        top: -30px;
+        z-index: 0;
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        transition: .3s; }
+      .footer .copyright a.social:hover {
+        color: #ffffff; }
+        .footer .copyright a.social:hover i {
+          transform: scale(1.05); }
+        .footer .copyright a.social:hover:after {
+          left: 10px;
+          top: 20px;
+          transition: .3s; }
