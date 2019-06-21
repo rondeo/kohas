@@ -1,4 +1,49 @@
 /*!
  * Header content
  */
-.header {}
+.header {
+  height: 700px;
+  background: $black url("../images/header-bg.jpg") center bottom no-repeat;
+
+  @include sm() {
+    height: 500px;
+  }
+  @include xs() {
+    height: 400px;
+  }
+
+  &-top {
+    height: 100%;
+
+    & .line-g {
+      background: url("../images/line-g.gif") left top repeat;
+      height: 15%;
+      width: 100%;
+    }
+
+    & .line-v {
+      background: url("../images/line-v.gif") left top repeat;
+      height: 45%;
+      width: 100%;
+    }
+
+    & a {
+      color: $white;
+
+      @include md() {
+        font-size: 26px;
+      }
+      @include sm() {
+        font-size: 22px;
+      }
+      @include xs() {
+        font-size: 18px;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $brown;
+      }
+    }
+  }
+}

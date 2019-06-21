@@ -10,6 +10,29 @@ body {
   font-weight: 400;
   font-size: 18px;
   font-variant: small-caps;
+
+  @include md() {
+    font-size: 17px;
+  }
+  @include sm() {
+    font-size: 16px;
+  }
+  @include xs() {
+    font-size: 15px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  @include md() {
+    font-size: 150%;
+  }
+  @include sm() {
+    font-size: 140%;
+  }
+  @include xs() {
+    font-size: 130%;
+  }
 }
 
 /* error if tags without attr */
@@ -53,6 +76,7 @@ a, a:hover {
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 #back-to-top {
@@ -77,26 +101,11 @@ a, a:hover {
   }
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #ddd;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: #ddd;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: #ddd;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: #ddd;
-}
-
 .scale {
+  transition: .3s;
 
   &:hover {
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -o-transform: scale(1.05);
+    transition: .3s;
     transform: scale(1.05);
   }
 }
@@ -111,5 +120,127 @@ a, a:hover {
 
 .title {
   font-size: 28px;
+
+  @include md() {
+    font-size: 26px;
+  }
+  @include sm() {
+    font-size: 22px;
+  }
+  @include xs() {
+    font-size: 18px;
+  }
 }
 
+.bg-grey {
+  background: $grey;
+
+  &.bg-waves {
+    background: $grey url("../images/waves.png") -200px center no-repeat;
+    background-size: contain;
+  }
+}
+
+.bg-waves {
+  background: url("../images/waves.png") -300px center no-repeat;
+  background-size: contain;
+}
+
+.bg-line-v {
+  background: url("../images/line-v.gif") -30% 95% no-repeat;
+
+  @include md() {
+    background-position: -100% 95%;
+  }
+  @include sm() {
+    background-position: -100% 115%;
+  }
+  @include xs() {
+    background-position: 0% 110%;
+  }
+}
+
+.borderbottom {
+  border-bottom: 2px solid $brown
+}
+
+.photo {
+  position: relative;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  background: url(../images/photo-bg.jpg) top right no-repeat;
+  margin-right: 20px;
+  margin-bottom: -80px;
+
+  @include sm() {
+    background-size: contain;
+  }
+  @include xs() {
+    background-size: contain;
+    margin-bottom: 20px;
+  }
+
+  & img {
+    position: absolute;
+    right: -15px;
+    top: 25px;
+  }
+}
+
+.btn-more {
+  font-size: 28px;
+  border: 2px solid $brown;
+  border-radius: 10px;
+  padding: 5px 50px;
+  color: $black;
+  transition: .3s;
+
+  @include md() {
+    font-size: 26px;
+  }
+  @include sm() {
+    font-size: 22px;
+  }
+  @include xs() {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background: $brown;
+    color: $white;
+    transition: .3s;
+  }
+}
+
+.hvr-sweep-to-bottom {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s;
+  border-radius: 10px;
+}
+.hvr-sweep-to-bottom:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $brown;
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  border-radius: 10px;
+}
+.hvr-sweep-to-bottom:hover, .hvr-sweep-to-bottom:focus, .hvr-sweep-to-bottom:active {
+  color: white;
+}
+.hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
+  transform: scaleY(1);
+}

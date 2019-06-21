@@ -3,5 +3,16 @@
  */
 
 .main {
-  padding-top: 70px;
+
+  & .products {
+
+    & a {
+      color: $black;
+      
+      &:hover {
+        color: $brown;
+        text-decoration: none;
+      }
+    }
+  }
 }
