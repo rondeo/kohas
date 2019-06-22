@@ -23,7 +23,5 @@
     "gulp-useref": "^3.0.4",
     "run-sequence": "^1.1.2"
   },
-  "dependencies": {
-    "npm": "^6.4.1"
-  }
+  "dependencies": {}
 }
